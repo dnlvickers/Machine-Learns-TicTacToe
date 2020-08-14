@@ -1,5 +1,8 @@
 #import pygame
 import pygame
+import Machine
+import Play_Machine
+import Train_Machine
 
 #generate initial game instance and screen
 pygame.init()
@@ -23,14 +26,27 @@ def test_draw():
     screen.blit(oImage, (100, 200))
     screen.blit(xImage, (200, 200))
 
+#Needed globals for the training
+trainingMode = True
+epochs = 10
+
 running = True
 while running:
+    #fill in background color
+    screen.fill((200, 200, 200))
+
     #keep game running until we close the screen
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
+    #buttom check to see if they want to activate training mode while they play the machine
+
+    #button to take in integer from player and train the computer for that number of epochs based upon the training data
+
+    #button to begin a game of tic-tac-toe and test the machine
+
     #draw necessy screen elements
-    screen.fill((200,200,200))
+
     test_draw()
     pygame.display.update()
